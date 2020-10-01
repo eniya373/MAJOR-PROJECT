@@ -14,7 +14,7 @@ def start(bot, update):
     bot.send_message(chat_id = update.effective_chat.id, text="if you want to turn on the light then type 'Turn on the light' or if you want to turn off the light then type in 'Turn off the light'")
     
 def wrong_message(bot, update):
-    bot.send_message(chat_id=update.effective_chat.id, text="Oops!,I couldn't recognize.Please try again!!")
+    bot.send_message(chat_id=update.effective_chat.id, text="Oops! I couldn't recognize.Please try again!!")
 
 def send_data_to_adafruit(value1):
     value=Data(value=value1)
