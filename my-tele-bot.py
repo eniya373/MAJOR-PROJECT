@@ -45,7 +45,7 @@ def text_given(bot, update):
     wrong_message(bot,update)
     
 u = Updater('Telegram_Token',use_context = True)
-dip = ud.dispatcher
+dip = u.dispatcher
 dp.add_handler(CommandHandler('turnonthelight',turn_on_light))
 dp.add_handler(CommandHandler('turnonthelight',turn_off_light))
 dp.add_handler(CommandHandler('start', start))
