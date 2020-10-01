@@ -44,9 +44,13 @@ def text_given(bot, update):
   else:
     wrong_message(bot,update)
     
- ud = Updater('Telegram_Token')
+u = Updater('Telegram_Token',use_context = True)
 dip = ud.dispatcher
-dip.add_handler(MessageHandler(Filters.text, text_given))
+dp.add_handler(CommandHandler('turnonthelight',turn_on_light))
+dp.add_handler(CommandHandler('turnonthelight',turn_off_light))
+dp.add_handler(CommandHandler('start', start))
+dp.add_handler(MessageHandler(Filters.command, wrong_message))
+dp.add_handler(MessageHandler(Filters.text, text_given))
 
 ud.start_polling()
 ud.idle()
