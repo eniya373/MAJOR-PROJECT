@@ -7,7 +7,6 @@ import os
 # y=ADAFRUIT_IO_KEY
 x = os.getenv('x')
 y = os.getenv('y')
-aio = Client(x,y)
 Telegram_Token= os.getenv('Telegram_Token')
 
 def start(bot, update):
@@ -44,7 +43,8 @@ def text_given(bot, update):
   else:
     wrong_message(bot,update)
     
-u = Updater('Telegram_Token')
+aio = Client(x,y)  
+u = Updater(Telegram_Token)
 dp = u.dispatcher
 dp.add_handler(CommandHandler('turnonthelight',turn_on_light))
 dp.add_handler(CommandHandler('turnonthelight',turn_off_light))
