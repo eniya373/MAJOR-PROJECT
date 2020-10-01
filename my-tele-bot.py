@@ -23,13 +23,13 @@ def send_data_to_adafruit(value1):
 def turn_on_light(bot, update):
   chat_id = update.message.chat_id
   bot.send_message(chat_id, text="Turning on the light")
-  bot.send_photo(chat_id, photo='https://img1.pnghut.com/0/17/9/01PWRBJ9UD/light-fixture-ico-lighting-bulb-lamp.jpg')
+  bot.send_photo(chat_id, photo='https://web02.splash.abc.net.au/splash-image-servlet/mvcservlet/imageServlet/profile2/ABCTEC027')
   send_data_to_adafruit(1)
   
 def turn_off_light(bot, update):
   chat_id = update.message.chat_id
   bot.send_message(chat_id, text="Turning off the light")
-  bot.send_photo(chat_id=update.effective_chat.id,photo='https://icon2.cleanpng.com/20171220/edw/bulb-png-image-5a3a8b1d359e49.98001045151378614121962758.jpg')
+  bot.send_photo(chat_id=update.effective_chat.id,photo='https://ak.picdn.net/shutterstock/videos/1697878/thumb/5.jpg')
   send_data_to_adafruit(0)
   
 def text_given(bot, update):
