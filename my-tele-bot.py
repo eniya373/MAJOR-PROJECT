@@ -49,8 +49,8 @@ dp = u.dispatcher
 dp.add_handler(CommandHandler('turnonthelight',turn_on_light))
 dp.add_handler(CommandHandler('turnonthelight',turn_off_light))
 dp.add_handler(CommandHandler('start', start))
-dp.add_handler(MessageHandler(Filters.command, wrong_message))
-dp.add_handler(MessageHandler(Filters.text, text_given))
+dp.add_handler(MessageHandler([Filters.command], wrong_message))
+dp.add_handler(MessageHandler([Filters.text], text_given))
 
 ud.start_polling()
 ud.idle()
